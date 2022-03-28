@@ -1,0 +1,41 @@
+body{
+    background-color: #e77f67;
+    overflow: hidden;
+    height: 100vh;
+
+}
+input{
+    font-size: 5em;
+    text-align: center;
+    width: 400px;
+    border: none;
+    background-color: #e77f67;
+    outline: none;
+    color: #303952;
+}
+.error{
+    background-color: #eb3b5a;
+}
+#scoreOne{
+    color: #f5cd79;
+    font-size: 4em;
+    width: 400px;
+
+    padding: 5%;
+}
+#scoreTwo{
+    color: #f5cd79;
+    font-size: 4em;
+    width: 400px;
+    padding: 5%;
+}
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    
+}
