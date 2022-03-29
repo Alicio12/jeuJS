@@ -2,7 +2,7 @@ body{
     background-color: #e77f67;
     overflow: hidden;
     height: 100vh;
-
+    font-family: 'Lato', sans-serif;
 }
 input{
     font-size: 5em;
@@ -12,6 +12,13 @@ input{
     background-color: #e77f67;
     outline: none;
     color: #303952;
+}
+#refresh{
+    font-size: 3em;
+    padding: 50px;
+    margin: 50px;
+    color: #f5cd79;
+    background-color: #303952;
 }
 .error{
     background-color: #eb3b5a;
@@ -38,4 +45,7 @@ header{
     display: flex;
     flex-direction: column;
     
+}
+#consigne{
+    color: #303952;
 }

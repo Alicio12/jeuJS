@@ -1,52 +1,62 @@
-var scorePlayerOne = 0;
-    document.getElementById("sumOne").innerHTML=scorePlayerOne;
-var scorePLayerTwo = 0;
-    document.getElementById("sumTwo").innerHTML=scorePLayerTwo;
 
-var randomNumer = Math.floor((Math.random() * 10) + 1);
 
-$(document).ready(function(){   //assure que jquery est prêt
+$(document).ready(function () {
 
-    $("#formUserOne").on("submit" , function(e){    //lance une fonction lors de la soumission de la réponse de J1, le "e" capture l'évènement
-        e.preventDefault()  //bloc le rechargement de la page, empêche en réalité le comprtement par défaut
-        let inputOne = $("input[type=text]")
+    let randomNumberOne = Math.floor(Math.random() * 6) +1;
+        console.log(randomNumberOne)
 
-        let userOneValue = parseInt(inputOne.val()) //transforme la saisie en valeur du bon typage
-        if(randomNumber !== userOneValue){  //condition de mauvaise réponse
-            input.val("")   //efface la valeur saisie du champ
-            input.addClass("error animated bounce") //ajoute une classe à l'input pour ajouter du style
+    var scorePlayerOne = 0;
+        document.getElementById("sumOne").innerHTML=scorePlayerOne;
 
-            setTimeout(function(){  //annule l'affet donné à l'input après un délais
-                input.removeClass("error animated bounce")
-            }, 1000)
+    $("#formUserOne").on("submit" , function(e){
+        e.preventDefault()
+        let input = $("input[type=text]")
+
+        let userOneValue = parseInt(input.val())
+        if(randomNumberOne !== userOneValue){
+            input.val("")
+            console.log("perdu")
         }
-        if(randomNumber === userOneValue){  //condition de bonne réponse
+        if(randomNumberOne === userOneValue){
+            console.log("gagné")
             ++scorePlayerOne
-        }
+            console.log(scorePlayerOne)
+            document.getElementById("sumOne").innerHTML=scorePlayerOne;
+            input.val("")
+            randomNumberOne = Math.floor(Math.random() * 6) +1;
+                console.log(randomNumberOne)
 
+        }
     })
+
+    let randomNumberTwo = Math.floor(Math.random() * 6) +1;
+        console.log(randomNumberTwo)
+
+    var scorePLayerTwo = 0;
+        document.getElementById("sumTwo").innerHTML=scorePLayerTwo;
 
     $("#formUserTwo").on("submit" , function(e){
         e.preventDefault()
-        let inputTwo = $("input[type=text]")
+        let input = $("input[type=text]")
 
-        let userTwoValue = parseInt(inputTwo.val())
-        if(randomNumber !== userTwoValue){
+        let userTwoValue = parseInt(input.val())
+        if(randomNumberTwo !== userTwoValue){
             input.val("")
-            input.addClass("error animated bounce")
-
-            setTimeout(function(){
-                input.removeClass("error animated bounce")
-            }, 1000)
+            console.log("perdu")
         }
-        if(randomNumber === userTwoValue){
+        if(randomNumberTwo === userTwoValue){
+            console.log("gagné")
             ++scorePLayerTwo
-        }
+            console.log(scorePLayerTwo)
+            document.getElementById("sumTwo").innerHTML=scorePLayerTwo;
+            input.val("")
+            randomNumberTwo = Math.floor(Math.random() * 6) +1;
+                console.log(randomNumberTwo)
 
+        }
     })
 
+    $("#refresh").on("click", function() {
+        location.reload();
+    })
 })
-
-
-
-

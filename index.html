@@ -6,10 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
-
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+    </style>
 </head>
 <body>
     <header>
+    <section id="consigne">
+        Consignes: Un dé est lancé pour chaque joueur, un chiffre potentiellement différent  pour chacun compris entre 1 et 6 inclus 
+    est assigné à chaque joueur. Chaque joueur doit renseigner chacun son tour un nombre dans la case qui lui correspond, si la
+    réponse est correcte alors le joueur marque 1 point. Le premier joueur atteignant 10 points remporte la partie.
+    </section>
     <section>
         <h2 id="scoreOne">
             Score joueur 1 = <span id="sumOne"></span>
@@ -21,11 +28,14 @@
 
     <section>
         <form id="formUserOne" action="">
-            <input type="text" name="valueUserOne" id="nameUserOne" placeholder="Joueur 1">
+            <input type="text" name="valueUserOne" placeholder="Joueur 1">
         </form>
         <form id="formUserTwo" action="">
-            <input type="text" name="valueUserTwo" id="nameUserTwo" placeholder="Joueur 2">
+            <input type="text" name="valueUserTwo" placeholder="Joueur 2">
         </form>
+    </section>
+    <section>
+        <input type="button" value="Nouvelle Partie" id="refresh" />
     </section>
     </header>
 
